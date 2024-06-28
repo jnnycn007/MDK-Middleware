@@ -47,7 +47,7 @@
 #define USBD0_DEV_DESC_IDPRODUCT        0x5901
 
 //     <o.0..15>Device Release Number <0x0000-0xFFFF>
-//     <i>Device Release Number in binary-coded decimal (bcdDevice)
+//     <i>Device Release Number in binary-coded decimal (bcdDevice).
 #define USBD0_DEV_DESC_BCDDEVICE        0x0100
 
 //   </h>
@@ -117,6 +117,20 @@
 //   <i>Specifies size of buffer used for Control Transfers.
 //   <i>It should be at least as big as maximum packet size for Endpoint 0.
 #define USBD0_EP0_BUF_SIZE              128
+
+//   <h>Data Buffers
+//     <e>Locate
+//       <i>Specifies if the USB data buffers are located in a specific memory
+//       <i>(via the linker script).
+#define USBD0_BUF_MEM_LOCATE            0
+
+//       <s.128>Section Name
+//         <i>Specifies the section name for the USB data buffers
+//         <i>(for positioning via the linker script).
+#define USBD0_BUF_MEM_SECTION_NAME      ".driver.usbd0"
+
+//     </e>
+//   </h>
 
 //   <h>OS Resources Settings
 //   <i>These settings are used to optimize usage of OS resources.

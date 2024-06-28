@@ -12,9 +12,9 @@
 
 The table below provides a complete overview of the folders that contain the files related to the File System Component.
 
+
 Directory              | Description
 :--------------------- | :---------------------
-./FileSystem/Config    | Configuration Files that are copied to the project when components are selected.
 ./FileSystem/Include   | Include files; once a component is select an Include Path is set for the C/C++ compiler to this directory.
 ./FileSystem/Source    | Source files for File System component.
 

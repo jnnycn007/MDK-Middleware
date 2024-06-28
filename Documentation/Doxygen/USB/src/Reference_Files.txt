@@ -4,6 +4,7 @@
 
 /**
 \defgroup   usb_files Directories and Files
+\brief      Folders and files related to the USB Component
 \details
 <b>Directories</b>
 
