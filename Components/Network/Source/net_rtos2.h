@@ -1,6 +1,6 @@
 /*------------------------------------------------------------------------------
  * MDK Middleware - Component ::Network
- * Copyright (c) 2004-2024 Arm Limited (or its affiliates). All rights reserved.
+ * Copyright (c) 2004-2026 Arm Limited (or its affiliates). All rights reserved.
  *------------------------------------------------------------------------------
  * Name:    net_rtos2.h
  * Purpose: Network CMSIS-RTOS2 abstraction layer
@@ -32,13 +32,21 @@
 
 static const osMutexAttr_t net_lock_attr = {
   "netCore_Mutex",
+#ifdef RTE_CMSIS_RTOS2_RTX5
   osMutexPrioInherit | osMutexRecursive | osMutexRobust,
+#else
+  osMutexPrioInherit | osMutexRecursive,
+#endif
   __NET_LOCK
 };
 
 static const osMutexAttr_t mem_lock_attr = {
   "netMemory_Mutex",
+#ifdef RTE_CMSIS_RTOS2_RTX5
   osMutexPrioInherit | osMutexRobust,
+#else
+  osMutexPrioInherit,
+#endif
   __MEM_LOCK
 };
 
