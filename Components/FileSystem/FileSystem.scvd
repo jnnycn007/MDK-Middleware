@@ -736,7 +736,7 @@
     <event id="36 + 0x8000" level="API"    property="fs_fwrite"             value="handle=%x[val1], buf=%x[val2], cnt=%d[val3]" info="Write to a file"/>
     <event id="37 + 0x8000" level="API"    property="fs_fread"              value="handle=%x[val1], buf=%x[val2], cnt=%d[val3]" info="Read from a file"/>
     <event id="38 + 0x8000" level="API"    property="fs_fflush"             value="handle=%x[val1]" info="Flush file buffers"/>
-    <event id="39 + 0x8000" level="API"    property="fs_fseek"              value="handle=%x[val1], offset=%d[(uint64_t)val3 &lt;&lt; 32) | val2], whence=%d[val4]" info="Move the file position"/>
+    <event id="39 + 0x8000" level="API"    property="fs_fseek"              value="handle=%x[val1], offset=%d[((uint64_t)val3 &lt;&lt; 32) | val2], whence=%d[val4]" info="Move the file position"/>
     <event id="40 + 0x8000" level="API"    property="fs_fsize"              value="handle=%x[val1]" info="Retrieve the file size"/>
 
     <!-- FAT events -->
@@ -807,7 +807,7 @@
     <event id="64 + 0x8100" level="Op"     property="FileRead"              value="h=%d[val1], buf=%x[val2], len=%d[val3]" info="Read file"/>
     <event id="65 + 0x8100" level="Op"     property="FileWrite"             value="h=%d[val1], buf=%x[val2], len=%d[val3]" info="Write file"/>
     <event id="66 + 0x8100" level="Op"     property="FileFlush"             value="h=%d[val1]" info="Flush file buffer"/>
-    <event id="67 + 0x8100" level="Op"     property="FileSeek"              value="h=%d[val1], offset=%d[(uint64_t)val3 &lt;&lt; 32) | val2], whence=%d[val4]" info="Set file position"/>
+    <event id="67 + 0x8100" level="Op"     property="FileSeek"              value="h=%d[val1], offset=%d[((uint64_t)val3 &lt;&lt; 32) | val2], whence=%d[val4]" info="Set file position"/>
     <event id="68 + 0x8100" level="Op"     property="FileSeekIncrease"      value="h=%d[val1], csize=%d[val2], nsize=%d[val3]" info="Increasing file size from csize to nsize"/>
     <event id="69 + 0x8100" level="Op"     property="FileDelete"            value="drive=%t[val1], path=%x[val2]" info="Delete file"/>
     <event id="70 + 0x8100" level="Op"     property="FileDeleteSuccess"     value="drive=%t[val1], path=%x[val2]" info="File delete successful"/>
